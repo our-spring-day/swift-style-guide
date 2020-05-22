@@ -66,7 +66,7 @@ override func menuButtonDidTap() {
 ###프로그래밍 권장사항
 - 가능하다면 변수를 정의할 때 함께 초기화하도록 합니다. Then을 사용하면 초기화와 함께 속성을 지정할 수 있습니다.
 
-```swfit
+```swift
 let label: UILabel = {
   let label = UILabel()
   label.textAlignment = .center
