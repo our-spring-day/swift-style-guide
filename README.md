@@ -22,6 +22,27 @@
 #### 상수
 - lowerCamelCase를 사용합니다.
 
+#### 약어
+- 약어로 시작하는 경우 소문자로 표기하고, 그 외의 경우에는 항상 대문자로 표기합니다.
+
+**좋은 예:**
+
+```swift
+let userID: Int?
+let html: String?
+let websiteURL: URL?
+let urlString: String?
+```
+
+**나쁜 예:**
+
+```swift
+let userId: Int?
+let HTML: String?
+let websiteUrl: NSURL?
+let URLString: String?
+```
+
 ### 주석
 - //를 사용해서 문서화에 사용되는 주석을 남깁니다.
 
@@ -74,4 +95,13 @@ let label: UILabel = {
   label.text = "Hello, World!"
   return label
 }()
+```
+
+```swift
+// Then을 사용할 경우
+let label = UILabel().then {
+  $0.textAlignment = .center
+  $0.textColor = .black
+  $0.text = "Hello, World!"
+}
 ```
