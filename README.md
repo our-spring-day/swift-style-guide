@@ -4,6 +4,17 @@
 
 ## 코드 레이아웃
 
+### 임포트
+- 모듈의 임포트는 알파벳 순서로 합니다.
+
+```swift
+import UIkit
+import RxSwift
+import RxCocoa
+import SnapKit
+import Then
+```
+
 ### 코드 들여쓰기
 - 코드의 들여쓰기는 탭(tab)으로 구분합니다.
 
