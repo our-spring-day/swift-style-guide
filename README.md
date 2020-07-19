@@ -5,10 +5,11 @@
 ## 코드 레이아웃
 
 ### 임포트
-- 모듈의 임포트는 알파벳 순서로 합니다.
-
+- 임포트는 UIKit과 Foundation을 선언 후 다른 모듈을 알파벳 순서로 합니다.
+- 
 ```swift
 import UIkit
+import Foundation
 import RxSwift
 import RxCocoa
 import SnapKit
@@ -29,6 +30,8 @@ import Then
 
 #### 변수
 - lowerCamelCase를 사용합니다.
+- 변수의 정렬 순서는 disposebag, instance들, ui 요소들, 그 외의 변수 순으로 정렬합니다.
+- 변수는 성격별로 구분 짓고 주석을 덧붙힙니다.
 
 #### 상수
 - lowerCamelCase를 사용합니다.
@@ -96,23 +99,31 @@ override func menuButtonDidTap() {
 
 
 ### 프로그래밍 권장사항
-- 가능하다면 변수를 정의할 때 함께 초기화하도록 합니다. Then을 사용하면 초기화와 함께 속성을 지정할 수 있습니다.
+- 가능하다면 변수를 선언을 한 뒤 attribute 함수에 일괄 정의 해줍니다.
 
 ```swift
-let label: UILabel = {
-  let label = UILabel()
-  label.textAlignment = .center
-  label.textColor = .black
-  label.text = "Hello, World!"
-  return label
-}()
-```
+-가능하다면 아래의 형식에 맞추어 작성합니다.
 
-```swift
-// Then을 사용할 경우
-let label = UILabel().then {
-  $0.textAlignment = .center
-  $0.textColor = .black
-  $0.text = "Hello, World!"
+var a = UIButton()
+var b = UILabel()
+
+func Atrribute {
+	a.do {
+	
+	}
+	b.do {
+	
+	}
+}
+
+func Layout {
+	view.addsubview(a)
+	view.addsubview(a)
+	a.snp.makeconstraint {
+	
+	}
+	b.snp.makeconstraint {
+	
+	}
 }
 ```
