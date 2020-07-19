@@ -99,15 +99,14 @@ override func menuButtonDidTap() {
 
 
 ### 프로그래밍 권장사항
-- 가능하다면 변수를 선언을 한 뒤 attribute 함수에 일괄 정의 해줍니다.
+- 가능하다면 변수를 선언을 한 뒤 attribute, layout 함수에 성격에 맞게 정의합니다.
 
 ```swift
--가능하다면 아래의 형식에 맞추어 작성합니다.
 
 var a = UIButton()
 var b = UILabel()
 
-func Atrribute {
+func atrribute {
 	a.do {
 	
 	}
@@ -116,7 +115,7 @@ func Atrribute {
 	}
 }
 
-func Layout {
+func layout {
 	view.addsubview(a)
 	view.addsubview(a)
 	a.snp.makeconstraint {
