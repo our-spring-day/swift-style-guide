@@ -6,7 +6,6 @@
 
 ### 임포트
 - 임포트는 UIKit과 Foundation을 선언 후 다른 모듈을 알파벳 순서로 합니다.
-- 
 ```swift
 import UIkit
 import Foundation
