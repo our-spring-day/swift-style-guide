@@ -102,26 +102,32 @@ override func menuButtonDidTap() {
 
 ```swift
 
-var a = UIButton()
-var b = UILabel()
+var checkBox = UIButton()
+var idLabel = UILabel()
 
 func atrribute {
-	a.do {
-	
+	checkBox.do {
+		$0.translatesAutoresizingMaskIntoConstraints = false
+            	$0.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 	}
-	b.do {
-	
+	idLabel.do {
+	   	$0.translatesAutoresizingMaskIntoConstraints = false
+          	$0.font = .systemFont(ofSize: 18, weight: .light)
+           	$0.textColor = .black
 	}
 }
 
 func layout {
-	view.addsubview(a)
-	view.addsubview(a)
-	a.snp.makeconstraint {
+	view.addsubview(checkBox)
+	view.addsubview(idLabel)
 	
+	checkBox.snp.makeconstraint {
+		$0.right.equalToSuperview().offset(-20)
+           	$0.centerY.equalToSuperview()
 	}
-	b.snp.makeconstraint {
-	
+	idLabel.snp.makeconstraint {
+		$0.centerY.equalToSuperview()
+           	$0.left.equalTo(userImageView.snp.right).offset(10)
 	}
 }
 ```
