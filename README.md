@@ -107,13 +107,11 @@ var idLabel = UILabel()
 
 func atrribute {
 	checkBox.do {
-		$0.translatesAutoresizingMaskIntoConstraints = false
-            	$0.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+		$0.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 	}
 	idLabel.do {
-	   	$0.translatesAutoresizingMaskIntoConstraints = false
-          	$0.font = .systemFont(ofSize: 18, weight: .light)
-           	$0.textColor = .black
+		$0.font = .systemFont(ofSize: 18, weight: .light)
+		$0.textColor = .black
 	}
 }
 
@@ -123,11 +121,11 @@ func layout {
 	
 	checkBox.snp.makeconstraint {
 		$0.right.equalToSuperview().offset(-20)
-           	$0.centerY.equalToSuperview()
+		$0.centerY.equalToSuperview()
 	}
 	idLabel.snp.makeconstraint {
 		$0.centerY.equalToSuperview()
-           	$0.left.equalTo(userImageView.snp.right).offset(10)
+		$0.left.equalTo(userImageView.snp.right).offset(10)
 	}
 }
 ```
