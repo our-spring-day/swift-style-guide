@@ -82,14 +82,14 @@ deinit {
 }
 
 
-// MARK: Layout
+// MARK: - Layout
 
 override func layoutSubviews() {
   // doSomething()
 }
 
 
-// MARK: Actions
+// MARK: - Actions
 
 override func menuButtonDidTap() {
   // doSomething()
