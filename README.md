@@ -5,7 +5,7 @@
 ## 코드 레이아웃
 
 ### 임포트
-- 임포트는 UIKit과 Foundation을 선언 후 다른 모듈을 알파벳 순서로 합니다.
+- 임포트는 알파벳 순서로 합니다. 코코아 프레임워크를 먼저 임포트 하고, 이외 프레임워크를 임포트 합니다. 
 ```swift
 import UIkit
 import Foundation
