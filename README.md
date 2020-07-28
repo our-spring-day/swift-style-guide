@@ -71,7 +71,7 @@ class ProfileView: UIView {
 Objective-C에서 제공하는 #pragma mark와 같은 기능으로, 연관된 코드와 그렇지 않은 코드를 구분할 때 사용합니다.
 
 ```swift
-// MARK: Init
+// MARK: - Init
 
 override init(frame: CGRect) {
   // doSomething()
